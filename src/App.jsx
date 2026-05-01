@@ -1,5 +1,5 @@
 import { useState, useRef } from 'react';
-import { ShoppingCart, Settings, ShieldCheck, Tool, MapPin, Phone, Clock, Facebook, ChevronRight } from 'lucide-react';
+import { ShoppingCart, Settings, ShieldCheck, Wrench, MapPin, Phone, Clock, FacebookIcon, ChevronRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { PRODUCTS } from './data/products';
 import { CartProvider, useCart } from './CartContext';

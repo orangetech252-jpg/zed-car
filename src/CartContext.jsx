@@ -24,7 +24,7 @@ export function CartProvider({ children }) {
 
   // We updated this function to accept the customerName
   const checkoutWhatsApp = (customerName) => {
-    const phone = "260000000000"; // Replace with Zed Car Electronics WhatsApp Number
+    const phone = "260972626617"; // Replace with Zed Car Electronics WhatsApp Number
     const nameIntro = customerName ? `My name is *${customerName}* and I` : "I";
     
     let msg = `Hello Zed Car Electronics! ${nameIntro} would like to book an order:\n\n`;

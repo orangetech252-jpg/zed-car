@@ -85,16 +85,49 @@ function MainApp() {
         {currentPage === 'home' ? (
           <motion.div key="home" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
             {/* HOME PAGE CONTENT */}
-            <header className="bg-[#0A192F] text-white py-24 px-4 text-center relative overflow-hidden">
-               <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
-               <div className="relative z-10 max-w-3xl mx-auto">
-                <h2 className="text-5xl md:text-7xl font-black mb-6 leading-tight tracking-tight">The Future of <span className="text-blue-500">In-Car</span> Tech</h2>
-                <p className="text-gray-400 text-lg mb-10">Professional grade Android screens and premium audio for the elite drivers of Kitwe.</p>
-                <button onClick={() => setCurrentPage('products')} className="bg-blue-600 hover:bg-blue-700 text-white font-black px-10 py-5 rounded-2xl transition shadow-xl text-lg uppercase tracking-widest flex items-center gap-3 mx-auto">
-                  Enter The Store <ChevronRight />
-                </button>
-              </div>
-            </header>
+<header className="relative h-[80vh] flex items-center justify-center text-white overflow-hidden">
+  {/* The Background Image */}
+  <div 
+    className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-transform duration-1000 hover:scale-105"
+    style={{ 
+      backgroundImage: `url('https://images.unsplash.com/photo-1603553329474-99f95f35394f?auto=format&fit=crop&q=80&w=2000')`,
+    }}
+  />
+  
+  {/* The Dark Overlay (Makes text pop) */}
+  <div className="absolute inset-0 bg-gradient-to-b from-[#0A192F]/80 via-[#0A192F]/40 to-[#0A192F]/90" />
+
+  {/* The Content */}
+  <div className="relative z-10 max-w-4xl mx-auto px-4 text-center">
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.2 }}
+    >
+      <span className="bg-blue-600 text-[10px] font-black px-4 py-1.5 rounded-full uppercase tracking-[0.3em] mb-6 inline-block shadow-lg">
+        Precision Engineering
+      </span>
+      <h2 className="text-6xl md:text-8xl font-black mb-8 leading-[0.9] tracking-tighter">
+        UPGRADE <br />
+        <span className="text-blue-500 underline decoration-white/10">YOUR RIDE</span>
+      </h2>
+      <p className="text-gray-200 text-lg md:text-xl mb-12 max-w-2xl mx-auto font-medium leading-relaxed italic">
+        "The Copperbelt's premier destination for high-end Android integration and cinematic car audio."
+      </p>
+      <div className="flex flex-col md:flex-row items-center justify-center gap-6">
+        <button 
+          onClick={() => setCurrentPage('products')} 
+          className="w-full md:w-auto bg-blue-600 hover:bg-blue-700 text-white font-black px-12 py-5 rounded-2xl transition-all shadow-[0_20px_50px_rgba(37,99,235,0.3)] uppercase tracking-widest flex items-center justify-center gap-3 group"
+        >
+          View Catalog <ChevronRight className="group-hover:translate-x-1 transition-transform" />
+        </button>
+      </div>
+    </motion.div>
+  </div>
+  
+  {/* Bottom Accent Line */}
+  <div className="absolute bottom-0 left-0 w-full h-2 bg-blue-600 shadow-[0_-10px_20px_rgba(37,99,235,0.5)]" />
+</header>
 
             <section className="py-24 bg-white">
               <div className="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-12">

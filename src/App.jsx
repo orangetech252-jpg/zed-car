@@ -1,8 +1,9 @@
 import { useState, useRef } from 'react';
-import { ShoppingCart, Settings, ShieldCheck, Wrench, MapPin, Phone, Clock, Facebook, ChevronRight } from 'lucide-react';
+import { ShoppingCart, Shield, Hammer, MapPin, Phone, Clock, ChevronRight } from 'lucide-react';
 import { PRODUCTS } from './data/products';
 import { CartProvider, useCart } from './CartContext';
 import CartDrawer from './CartDrawer';
+import { motion, AnimatePresence } from 'framer-motion';
 
 function MainApp() {
   const [isCartOpen, setIsCartOpen] = useState(false);
@@ -131,12 +132,12 @@ function MainApp() {
             <section className="py-24 bg-white">
               <div className="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-12">
                 <div className="text-center p-6">
-                  <div className="w-20 h-20 bg-blue-50 rounded-3xl flex items-center justify-center mx-auto mb-6 text-blue-600 shadow-inner"><Tool size={32}/></div>
+                  <div className="w-20 h-20 bg-blue-50 rounded-3xl flex items-center justify-center mx-auto mb-6 text-blue-600 shadow-inner"><Hammer size={32}/></div>
                   <h4 className="text-xl font-black mb-4 uppercase tracking-tight">Precision Install</h4>
                   <p className="text-gray-500 leading-relaxed">No messy wires. We provide factory-finish installations for every vehicle type.</p>
                 </div>
                 <div className="text-center p-6 border-y md:border-y-0 md:border-x border-gray-100">
-                  <div className="w-20 h-20 bg-blue-50 rounded-3xl flex items-center justify-center mx-auto mb-6 text-blue-600 shadow-inner"><ShieldCheck size={32}/></div>
+                  <div className="w-20 h-20 bg-blue-50 rounded-3xl flex items-center justify-center mx-auto mb-6 text-blue-600 shadow-inner"><Shield size={32}/></div>
                   <h4 className="text-xl font-black mb-4 uppercase tracking-tight">Service Warranty</h4>
                   <p className="text-gray-500 leading-relaxed">All products come with our exclusive 6-month shop warranty for peace of mind.</p>
                 </div>
@@ -205,4 +206,4 @@ export default function App() {
       <MainApp />
     </CartProvider>
   );
-}
+        }

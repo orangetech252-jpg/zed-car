@@ -314,4 +314,4 @@ export default function App() {
       <MainApp />
     </CartProvider>
   );
-                      }
+}
